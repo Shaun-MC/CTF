@@ -2,6 +2,8 @@
 #define PLAYER_H_
 #include "colors.h"
 
+enum kDirection {UP, DOWN, LEFT, RIGHT, STAY};
+
 typedef struct {
     int x;
     int y;
@@ -12,6 +14,9 @@ public:
     Player(char symbol, int colorCode, Coordinates location) : symbol_(symbol), colorCode_(colorCode), location_(location) {};
     string toString();
     bool addScore(int amount); //returns true if alive, else does not add amount and returns false
+    Coordinates move(kDirection direction); //move in direction and return new coordinates
+    void kill(); //sets alive_ to false
+
 private:
     Coordinates location_; 
     char symbol_;   //symbol to represent player on board

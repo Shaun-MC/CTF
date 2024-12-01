@@ -22,6 +22,9 @@
 // modifiers
 #define RESET 0
 #define BOLD 1
+#define DIM 2
+#define ITALIC 3
 #define UNDERLINE 4
+#define STRIKETHROUGH 9
 
 #endif
