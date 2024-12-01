@@ -14,12 +14,11 @@ int main(int argc, char* argv[]){
         cout << "Usage: " << argv[0] << " port" << endl;
         exit(1);
     }
-    string port = argv[1];
-    // int server = InitSocket(atoi(port));
+    int server = InitSocket(atoi(argv[1]));
 }
 
 // Creates and binds socket to serverPort, enables socket reuse without waiting for OS to recycle it, 
-// and sets it to listen for up to totalPlayers connections. Returns socket descriptor.
+// and sets it to listen for up to 5 connections waiting. Returns socket descriptor.
 int InitSocket(int serverPort){
     int sd = socket(AF_INET, SOCK_STREAM, 0); // creates a new socket for IP using TCP
     // Enable socket reuse without waiting for the OS to recycle it
