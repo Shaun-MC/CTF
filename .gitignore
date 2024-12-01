@@ -1,3 +1,6 @@
-main.dSYM
+#ide
+.vscode/
 
-main
+#compiled files
+*.exe
+*.out
